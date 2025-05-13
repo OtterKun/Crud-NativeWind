@@ -1,13 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
+import { Linking } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
 import "./global.css"
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text class="text-blue-600">Open up App.tsx to start working on your app!</Text>
-      <Text class="p-8">test</Text>
-      <StatusBar style="auto" />
+    <View className="pt-12 bg-fuchsia-50">
+      <Text className="text-left text-xl font-bold text-sky-600 pl-5">Sub to Gigi Murin!</Text>
+      <Text className="text-purple-400 text-right"
+      onPress={() => Linking.openURL('https://github.com/OtterKun')}>Creator.</Text>
     </View>
   );
 }
