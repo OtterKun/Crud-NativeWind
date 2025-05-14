@@ -1,9 +1,20 @@
 import "../global.css"
 import { View } from "react-native";
+import clsx from 'clsx';
 
-export function Card() {
-  return (
-    <View className="rounded-xl border-4 border-amber-300 bg-fuchsia-50 overflow-hidden gap-4 h-32">
-    </View>
-  );
+type Props = {
+  children: ReactNode
+  className?: string
+}
+
+export function Card({ children, className}: Props) {
+return (
+<View
+  className={clsx(
+      className
+  )}
+>
+  {children}
+</View>
+)
 }
